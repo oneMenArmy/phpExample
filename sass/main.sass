@@ -1,0 +1,137 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header-product-list
+	.container
+		border-bottom: 1px solid black
+		padding-top: 25px
+		padding-left: 0px
+		padding-right: 0px
+
+.button
+	display: inline-block
+	border: 1px solid black
+	color: #000
+	text-decoration: none
+	background-color: #d0cccb
+	padding: 10px 25px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 800
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten(#d0cccb, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken(#d0cccb, 5%)
+		&::after
+			opacity: .32
+
+.grid
+	display: grid
+
+.container
+	padding: 0
+
+.delete-action-form
+	width: 1110px
+	position: absolute
+	top: 20px
+
+.button-apply, .action-options
+	position: absolute
+	right: -29px
+	top: 18px
+	height: 30.2px
+
+.action-options
+	right: 95px
+
+.button-apply
+	padding: 4px 25px
+
+.all-items
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 10px
+	padding: 10px	
+
+.item
+	background-color: #d0cccb
+	height: 150px
+	text-align: center
+	border: 1px solid black
+	font-size: 18px
+	padding-bottom: 18px
+
+.check-dele
+	position: relative
+	top: 5px
+	left: 5px
+
+.add-form
+	position: relative
+
+.button-add
+	position: absolute
+	top: -100px
+	right: 0
+
+.product-form
+	margin-top: 40px
+
+.product-info
+	position: absolute
+	left: 100px
+	margin-bottom: 20px
+
+.prod-height, .prod-width, .prod-length, .prod-size, .prod-weight
+	margin-bottom: 20px
+
+@import "media" // Always at the end
